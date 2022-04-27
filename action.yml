@@ -1,13 +1,13 @@
-name: 'Wait'
-description: 'Wait a designated number of milliseconds'
+name: "Cargo get version"
+description: "Get version number from Cargo.toml"
 inputs:
-  milliseconds:  # id of input
-    description: 'number of milliseconds to wait'
+  cargoFilePath:
+    description: "Path to where your Cargo.toml is"
     required: true
-    default: '1000'
+    default: "Cargo.toml"
 outputs:
-  time: # output will be available to future steps
-    description: 'The current time after waiting'
+  version:
+    description: "Version number"
 runs:
-  using: 'node16'
-  main: 'dist/index.js'
+  using: "node16"
+  main: "dist/index.js"
